@@ -12,7 +12,7 @@ void main(){
 	double iA = 0, iB = 2;//initial interval
 	
 	double a = iA, b = iB;// a and b
-	double c = 0, fa = 0, fb = 0, fc = 69420; // some random large value for fc because line 18, when fc is 0 we have found a root
+	double c = 0, fa = 0, fb = 0, fc = 69420; // some random large value for fc because line 23, when fc is 0 we have found a root
 	const double eps = 0.000001;//10^-6 , the tolerance for fc = 0
 	int i = 0;
 	
