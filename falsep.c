@@ -13,14 +13,14 @@ void main(){
 	
 	double a = iA, b = iB;// a and b
 	double c = 0, fa = 0, fb = 0, fc = 69420; // some random large value for fc because line 23, when fc is 0 we have found a root
-	const double eps = 0.000001;//10^-6 , the tolerance for fc = 0
+	const double tol = 0.000001;//10^-6 , the tolerance for fc = 0
 	int i = 0;
 	
 	
 	printf("\n\nFalse Position Method\n\n");
 	printf("a\t\tb\t\tc\t\tf(c)\n");
 	printf("__________________________________________________________\n");
-	while(fabs(fc) > eps){	//while we have not found a root
+	while(fabs(fc) > tol){	//while we have not found a root
 		fa = f(a);
 		fb = f(b);
 		c = b - fb * (b - a) / (fb - fa);//calculating x-intercept of secant line, standard formula
@@ -35,7 +35,7 @@ void main(){
 	}
 	printf("\n%d iterations\n", i);
 	printf("\nRoot obtained as : %lf\t", c);
-	printf("Tolerance : %lf\n\n", eps);
+	printf("Tolerance : %lf\n\n", tol);
 }
 
 
